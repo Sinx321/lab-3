@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор объёма</title>
+</head>
+
+<body>
+
+<h1>Калькулятор объёма фигур</h1>
+
+<form method="POST">
+
+    <p>
+        <label for="shape">Фигура:</label>
+
+        <select name="shape" id="shape">
+
+            <option value="sphere">Шар</option>
+
+            <option value="cube">Куб</option>
+
+            <option value="cylinder">Цилиндр</option>
+
+            <option value="cone">Конус</option>
+
+            <option value="pyramid">Пирамида</option>
+
+        </select>
+    </p>
+
+    <p>
+        <label for="val1">
+            Радиус / сторона:
+        </label>
+
+        <input
+            type="text"
+            id="val1"
+            name="val1"
+            value="{{ v1 }}"
+        >
+    </p>
+
+    <p>
+        <label for="val2">
+            Высота:
+        </label>
+
+        <input
+            type="text"
+            id="val2"
+            name="val2"
+            value="{{ v2 }}"
+        >
+    </p>
+
+    <p>
+        <label for="precision">
+            Точность:
+        </label>
+
+        <input
+            type="text"
+            id="precision"
+            name="precision"
+            value="{{ pr }}"
+        >
+    </p>
+
+    <button type="submit">
+        Рассчитать
+    </button>
+
+</form>
+
+<hr>
+
+<h2>{{ ans }}</h2>
+
+</body>
+</html>
